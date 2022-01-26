@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     final Handler handler = new Handler(Looper.getMainLooper());
     final Random rand = new Random();
 
-    private int[] sequence = {1,2,3,3};//new int[4];
+    private int[] sequence = new int[4];
     private int size = 4;
     private int current = 0;
     private int score = 0;
@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //generateSequence();
+        generateSequence();
         displaySequence();
     }
 
@@ -161,8 +161,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showScore() {
-        TextView tv1 = (TextView)findViewById(R.id.pointLabel);
-        tv1.setText(String.valueOf(score));
+        TextView pointLabel = (TextView) findViewById(R.id.pointLabel);
+        pointLabel.setText(String.valueOf(score));
     }
 
     public void checkSequence(View view) {
