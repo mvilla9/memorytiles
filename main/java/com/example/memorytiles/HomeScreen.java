@@ -14,10 +14,6 @@ public class HomeScreen extends AppCompatActivity {
 
     }
 
-    //public void activateGameScreen(View view) {
-    //    setContentView(R.layout.activity_main);
-    //}
-
     public void activateGameScreen(View v) {
         Intent intent = new Intent(HomeScreen.this, MainActivity.class);
         startActivity(intent);
